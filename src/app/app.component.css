@@ -1,6 +1,5 @@
 * {
   margin: 0;
-  font-family: "Roboto", sans-serif;
 }
 footer {
   position: relative;
@@ -12,4 +11,9 @@ footer {
 }
 img {
   width: 50px;
+}
+i {
+  font-size: 40px;
+  color: orange;
+  margin: 5px 0px 15px 5px;
 }
