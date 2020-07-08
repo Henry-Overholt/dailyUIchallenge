@@ -1,9 +1,21 @@
-<div>
+<div id="wrapper">
   <h1>Welcome to My Daily UI challenge!</h1>
   <h3>
     My name is Henry Overholt, I'm a Frontend Developer. I decided to use this
     site to practice my frontend skills by following along with Daily UI's daily
     design challenges.
   </h3>
-  <div id="challengeHolder"></div>
+  <div id="challengeContainer">
+    <div
+      class="challenges"
+      *ngFor="let challenge of challenges; index as i"
+      (click)="showPrompt(i)"
+    >
+      <h4>Daily UI ::{{ challenge.challengeNum }}</h4>
+      <div class="prompt" *ngIf="challenge.show">
+        <p>{{ challenge.prompt }}</p>
+        <button routerLink="/{{ challenge.path }}">See Project</button>
+      </div>
+    </div>
+  </div>
 </div>
