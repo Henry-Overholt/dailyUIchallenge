@@ -67,3 +67,26 @@ button {
   font-family: "Roboto", sans-serif;
   margin: 10px;
 }
+.hideMobile {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    width: 50%;
+    font-size: 40px;
+  }
+  h3 {
+    width: 50%;
+  }
+  #challengeContainer {
+    width: 90%;
+
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .challenges {
+    width: 30%;
+    height: 250px;
+  }
+}

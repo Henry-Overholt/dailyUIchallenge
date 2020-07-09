@@ -7,7 +7,7 @@ import { HomeComponent } from "./home/home.component";
 import { NumberOneComponent } from "./number-one/number-one.component";
 const appRoutes: Routes = [
   { path: "home", component: HomeComponent },
-  { path: "001", component: NumberOneComponent },
+  { path: "dailyUI:001", component: NumberOneComponent },
   { path: "**", component: HomeComponent },
   { path: "", redirectTo: "/home", pathMatch: "full" },
 ];
