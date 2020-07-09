@@ -12,14 +12,14 @@ export class HomeComponent implements OnInit {
       prompt:
         "Create a sign up page, modal, form, or app screen related to signing up for something. It could be for a volunteer event, contest registration, a giveaway, or anything you can image.",
       show: false,
-      path: "001",
+      path: "dailyUI:001",
     },
-    {
-      challengeNum: "002",
-      prompt: "This is just a test for number 2",
-      show: false,
-      path: "002",
-    },
+    // {
+    //   challengeNum: "002",
+    //   prompt: "This is just a test for number 2",
+    //   show: false,
+    //   path: "dailyUI:002",
+    // },
   ];
   constructor() {}
 
