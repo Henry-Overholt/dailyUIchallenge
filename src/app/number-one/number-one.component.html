@@ -1,1 +1,50 @@
-<p>number-one works!</p>
+<main>
+  <div id="wrapper">
+    <form
+      #simpleForm="ngForm"
+      id="simpleForm"
+      (ngSubmit)="handleForm(simpleForm.value)"
+    >
+      <h1 id="title">The Rebel Alliance Needs You!</h1>
+      <p id="description">
+        Sign Up today to fight for your freedom! Keep the Empire's Eyes Off You,
+        click the Jedi Order Symbol at the bottom to disguise this form! The
+        information still gets to us but everyone thinks you are signing up for
+        the Imperial Academy, to learn how to miss every single shot.
+      </p>
+      <div id="names">
+        <label for="firstName">First Name : </label>
+        <input type="text" name="firstName" placeholder="First Name" ngModel />
+        <label for="lastName">Last Name : </label>
+        <input type="text" name="lastName" ngModel placeholder="Last Name" />
+      </div>
+
+      <label for="email">Email : </label>
+      <input type="email" name="email" placeholder="Email Address" ngModel />
+
+      <label for="planetName">What Planet do live on?</label>
+      <input
+        type="text"
+        name="planetName"
+        ngModel
+        placeholder="What Planet are you located on?"
+      />
+
+      <button id="submit">Sign Up</button>
+      <i class="fab fa-jedi-order" *ngIf="!hide" (click)="hideAlliance()"></i>
+      <i
+        class="fab fa-galactic-republic"
+        *ngIf="hide"
+        (click)="hideAlliance()"
+      ></i>
+    </form>
+    <div id="confrimation" *ngIf="confrimation">
+      <div id="window">
+        <p>Thanks for signing up {{ user.firstName }}!</p>
+        <i class="far fa-smile-wink" id="smile"></i>
+        <p>Expect an email at {{ user.email }}</p>
+      </div>
+      <i class="fas fa-window-close" id="close" (click)="closeWindow()"></i>
+    </div>
+  </div>
+</main>
